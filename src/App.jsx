@@ -2,6 +2,7 @@ import { useState } from 'react'
 import GeneralInfo from './components/GeneralInfo'
 import Education from './components/Education'
 import ResumePreview from './components/ResumePreview'
+import { v4 as uuidv4 } from 'uuid';
 import './App.css'
 
 function App() {
@@ -62,6 +63,11 @@ function App() {
     }
   }
 
+  const addEdu = () => {
+    const newEducation = {...educationInfo, id:uuidv4()}
+    setEducationInfo(prev => [...prev, newEducation])
+  }
+
   const handleName = (e) => {
     setGeneralInfo({
       ...generalInfo,
@@ -75,7 +81,7 @@ function App() {
       nameChange={handleName} 
     />
 
-    <Education info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu}/>
+    <Education info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu} addEdu={addEdu}/>
     <ResumePreview info={generalInfo} eduInfo={educationInfo}/>
     </div>
   )

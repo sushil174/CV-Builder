@@ -1,6 +1,7 @@
-function Education({info,intituteChange, deleteEdu}) {
+function Education({info,intituteChange, deleteEdu, addEdu}) {
     return (   
-        info.map(edu => (
+        <> 
+        {info.map(edu => (
             <div key={edu.id}>
                 <label>Institute </label>
                 <input type="text" name="institute" onChange={e => {intituteChange(edu.id,e)}}/>
@@ -15,8 +16,11 @@ function Education({info,intituteChange, deleteEdu}) {
                 <input type="text" name="score" onChange={e => {intituteChange(edu.id,e)}}/>
 
                 <button onClick={deleteEdu(edu.id)}>Delete</button>
+                
             </div>
-        ))
+        ))}
+        <button onClick={addEdu}>Add</button>
+        </>
     );
 }
 
