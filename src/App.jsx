@@ -53,6 +53,15 @@ function App() {
     }))
   }
 
+  const deleteEdu = (id) => {
+    return function() {
+      const updatedEducation = educationInfo.filter(edu => {
+        return edu.id !== id
+      })
+      setEducationInfo(updatedEducation)
+    }
+  }
+
   const handleName = (e) => {
     setGeneralInfo({
       ...generalInfo,
@@ -66,7 +75,7 @@ function App() {
       nameChange={handleName} 
     />
 
-    <Education info={educationInfo} intituteChange={handleInstitute}/>
+    <Education info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu}/>
     <ResumePreview info={generalInfo} eduInfo={educationInfo}/>
     </div>
   )
