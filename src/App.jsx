@@ -56,28 +56,7 @@ function App() {
   const handleName = (e) => {
     setGeneralInfo({
       ...generalInfo,
-      full_name : e.target.value
-    })
-  }
-
-  const handleEmail = (e) => {
-    setGeneralInfo({
-      ...generalInfo,
-      email : e.target.value
-    })
-  }
-
-  const handlePhone = (e) => {
-    setGeneralInfo({
-      ...generalInfo,
-      phone : e.target.value
-    })
-  }
-
-  const handleAddress = (e) => {
-    setGeneralInfo({
-      ...generalInfo,
-      address: e.target.value
+      [e.target.name] : e.target.value
     })
   }
 
@@ -85,9 +64,6 @@ function App() {
     <div className='container'>
       <GeneralInfo info = {generalInfo} 
       nameChange={handleName} 
-      emailChange={handleEmail} 
-      phoneChange={handlePhone} 
-      addressChange={handleAddress}
     />
 
     <Education info={educationInfo} intituteChange={handleInstitute}/>
