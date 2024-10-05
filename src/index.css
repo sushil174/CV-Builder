@@ -104,11 +104,19 @@ input, button {
   padding: 5px;
   font-size: 1rem;
   border: none;
+  border-radius: 5px;
 }
-
+input {
+  background-color: lightgrey;
+  padding: 5px 10px;
+}
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightseagreen;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 .header button {

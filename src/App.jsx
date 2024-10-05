@@ -32,6 +32,20 @@ function App() {
       description : 'nothing'
     }
   ]
+  const educationLabels = [
+    {label : "institute", name :"institute" },
+    {label : "study", name :"study" },
+    {label : "timeline", name :"timeline" },
+    {label : "score", name :"score" },
+  ]
+
+  const experienceLabels = [
+    {label : "company", name :"company" },
+    {label : "position", name :"position" },
+    {label : "timeline", name :"timeline" },
+    {label : "description", name :"description" },
+  ]
+
 
   const [generalInfo, setGeneralInfo] = useState(initalGeneralInfo)
   const [educationInfo, setEducationInfo] = useState(initialEducationInfo)
@@ -106,8 +120,8 @@ function App() {
     <div className='container'>
       <div className='fill-in'>
         <GeneralInfo info = {generalInfo} nameChange={handleName} />
-        <Education info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu} addEdu={addEdu}/>
-        <Experience info={experienceInfo} companyChange={handleCompany} deleteExp={deleteExp} addExp={addExp}/>
+        <Education labels={educationLabels} info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu} addEdu={addEdu}/>
+        <Experience labels={experienceLabels} info={experienceInfo} companyChange={handleCompany} deleteExp={deleteExp} addExp={addExp}/>
       </div>
       <ResumePreview info={generalInfo} eduInfo={educationInfo} expInfo={experienceInfo}/>
     </div>
