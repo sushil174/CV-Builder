@@ -1,6 +1,8 @@
 function GeneralInfo({info, nameChange}) {
+
     return (
         <div  className="general-info">
+            <h2>Personal Details</h2>
             <ul>
                 <li>
                     <label>Full Name</label>

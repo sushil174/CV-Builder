@@ -59,7 +59,7 @@ function App() {
   }
   
   const addEdu = () => {
-    const newEducation = {...initialEducationInfo, id:uuidv4()}
+    const newEducation = {...initialEducationInfo, id:uuidv4() , institute : "New Institute"}
     setEducationInfo(prev => [...prev, newEducation])
   }
 
@@ -97,7 +97,7 @@ function App() {
   }
   
   const addExp = () => {
-    const newExperience = {...initialExperienceInfo, id:uuidv4()}
+    const newExperience = {...initialExperienceInfo, id:uuidv4(), company : "new company"}
     setExperienceInfo(prev => [...prev, newExperience])
   }
 

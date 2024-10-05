@@ -1,6 +1,7 @@
 function Education({info,intituteChange, deleteEdu, addEdu}) {
     return (   
         <div className="input-education"> 
+        <h2>Education Details</h2>
         {info.map(edu => (
             <ul key={edu.id}>
 

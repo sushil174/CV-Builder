@@ -1,3 +1,5 @@
+import ExperienceInput from "./ExperienceInput";
+
 function Experience({
     info,
     companyChange,
@@ -6,7 +8,16 @@ function Experience({
 }) {
     return (   
         <div className="input-experience"> 
-        {info.map(work => (
+        <h2>Experience Details</h2>
+        {
+            info.map(work => (
+                <div key={work.id}>
+                    <ExperienceInput work={work} companyChange={companyChange} deleteExp={deleteExp}/>
+                </div>
+            ))
+        }
+        {/* {
+        info.map(work => (
             <ul key={work.id}>
                 <li>
                     <label>Company </label>
@@ -31,7 +42,8 @@ function Experience({
                 <button onClick={deleteExp(work.id)}>Delete</button>
                 
             </ul>
-        ))}
+        ))
+    } */}
         <button onClick={addExp}>Add</button>
         </div>
     );
