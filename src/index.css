@@ -1,7 +1,14 @@
-body {
-  font-family: 'Times New Roman', Times, serif;
+:root {
+  --header-background-color : #1e293b;
+  --header-font-color : white;
+  --body-color : lightgray;
+  --input-bg-color : rgb(239, 237, 237);
 }
 
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--body-color);
+}
 .container {
   display: flex;
   justify-content: center;
@@ -10,11 +17,11 @@ body {
 }
 
 .resume-info {
-  background-color: lightseagreen;
+  background-color: var(--header-font-color);
   width: 210mm;
   height: 297mm;
   box-sizing: border-box;
-  font-size: 1.10rem;
+  font-size: 1.15rem;
 }
 
 h1, h2 , p ,ul,input{
@@ -24,7 +31,8 @@ h1, h2 , p ,ul,input{
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: lightpink;
+  background-color: var(--header-background-color);
+  color: var(--header-font-color);
   padding: 2em;
   gap: 1em;
 
@@ -42,9 +50,10 @@ h1, h2 , p ,ul,input{
 }
 
 .education-info h2 , .experience-info h2 {
-  background-color: lightsalmon;
-  text-align: center;
-  padding: 5px;
+  /* background-color: lightsalmon; */
+  /* text-align: center; */
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--header-background-color);
 }
 
 .education-info div, .experience-info div {
@@ -63,9 +72,7 @@ h1, h2 , p ,ul,input{
 .fill-in h2 {
   text-align: center;
 }
-.general-info {
-  background-color: lightcoral;
-}
+
 
 .input-experience , .input-education, .general-info {
   display: flex;
@@ -79,6 +86,7 @@ li {
   list-style: none;
   display: flex;
   flex-direction: column; 
+  gap: 5px;
 }
 
 ul {
@@ -89,15 +97,12 @@ ul {
 }
 
 .input-experience ul, .input-education ul{
-  border-bottom: 1px solid red;
-  padding-bottom: 1em;
-}
-.input-experience {
-  background-color: lightblue;
+  border-bottom: 1px solid black;
+  padding-block: 1em;
 }
 
-.input-education {
-  background-color: lightgreen;
+.general-info,.input-experience,.input-education {
+  background-color: var(--header-font-color);
 }
 
 input, button {
@@ -105,26 +110,37 @@ input, button {
   font-size: 1rem;
   border: none;
   border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
 }
-input {
-  background-color: lightgrey;
+input,button {
+  background-color: var(--input-bg-color);
+  border: 2px solid var(--body-color);
   padding: 5px 10px;
+}
+
+button:hover {
+  background-color: lightseagreen;
+}
+
+ul button:hover {
+  background-color: lightpink;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid lightseagreen;
+  border: 2px solid var(--body-color);
   padding: 5px 10px;
   border-radius: 10px;
 }
 
 .header button {
+  border: none;
   width: 2em;
   height: 2em;
   border-radius: 50%;
   background-color: transparent;
 }
 .header button:hover {
-  background-color: lightcoral;
+  background-color: var(--body-color);
 }

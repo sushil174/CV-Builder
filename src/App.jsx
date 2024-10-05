@@ -33,17 +33,17 @@ function App() {
     }
   ]
   const educationLabels = [
-    {label : "institute", name :"institute" },
-    {label : "study", name :"study" },
-    {label : "timeline", name :"timeline" },
-    {label : "score", name :"score" },
+    {label : "Institute", name :"institute" },
+    {label : "Study", name :"study" },
+    {label : "Timeline", name :"timeline" },
+    {label : "Score", name :"score" },
   ]
 
   const experienceLabels = [
-    {label : "company", name :"company" },
-    {label : "position", name :"position" },
-    {label : "timeline", name :"timeline" },
-    {label : "description", name :"description" },
+    {label : "Company", name :"company" },
+    {label : "Position", name :"position" },
+    {label : "Timeline", name :"timeline" },
+    {label : "Description", name :"description" },
   ]
 
 
