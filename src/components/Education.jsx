@@ -1,8 +1,16 @@
+import EducationInput from "./EducationInput";
 function Education({info,intituteChange, deleteEdu, addEdu}) {
     return (   
         <div className="input-education"> 
         <h2>Education Details</h2>
-        {info.map(edu => (
+        {
+            info.map(edu => (
+                <div key={edu.id}>
+                    <EducationInput edu={edu} intituteChange={intituteChange} deleteEdu={deleteEdu}/>
+                </div>
+            ))
+        }
+        {/* {info.map(edu => (
             <ul key={edu.id}>
 
                 <li>
@@ -28,7 +36,7 @@ function Education({info,intituteChange, deleteEdu, addEdu}) {
                 <button onClick={deleteEdu(edu.id)}>Delete</button>
                 
             </ul>
-        ))}
+        ))} */}
         <button onClick={addEdu}>Add</button>
         </div>
     );

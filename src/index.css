@@ -110,3 +110,13 @@ input, button {
   display: flex;
   justify-content: space-between;
 }
+
+.header button {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.header button:hover {
+  background-color: lightcoral;
+}

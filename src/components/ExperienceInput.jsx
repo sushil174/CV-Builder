@@ -18,7 +18,7 @@ function ExperienceInput({work, companyChange, deleteExp}) {
                 isExpand && 
                     <ul>
                         <li>
-                            <label>Company </label>
+                            <label>Company</label>
                             <input type="text" name="company" value={work.company || ''} onChange={e => {companyChange(work.id,e)}}/>
                         </li>
             
