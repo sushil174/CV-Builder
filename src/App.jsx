@@ -104,14 +104,12 @@ function App() {
 
   return (
     <div className='container'>
-      <GeneralInfo info = {generalInfo} 
-      nameChange={handleName} 
-    />
-
-    <Education info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu} addEdu={addEdu}/>
-    <Experience info={experienceInfo} companyChange={handleCompany} deleteExp={deleteExp} addExp={addExp}/>
-    <ResumePreview info={generalInfo} eduInfo={educationInfo} expInfo={experienceInfo}/>
-
+      <div className='fill-in'>
+        <GeneralInfo info = {generalInfo} nameChange={handleName} />
+        <Education info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu} addEdu={addEdu}/>
+        <Experience info={experienceInfo} companyChange={handleCompany} deleteExp={deleteExp} addExp={addExp}/>
+      </div>
+      <ResumePreview info={generalInfo} eduInfo={educationInfo} expInfo={experienceInfo}/>
     </div>
   )
 }
