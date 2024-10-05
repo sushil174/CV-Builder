@@ -4,7 +4,6 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 import ResumePreview from './components/ResumePreview'
 import { v4 as uuidv4 } from 'uuid';
-import './App.css'
 
 function App() {
 
@@ -18,18 +17,19 @@ function App() {
     {
       id : '1',
       institute : 'mumbai university',
-      study : '',
-      timeline : '',
-      score : '',
+      study : 'cs',
+      timeline : '2022-2023',
+      score : '10',
     }
   ]
 
   const initialExperienceInfo = [
     {
-      company : '',
-      position : '',
-      timeline : '',
-      description : ''
+      id : '1',
+      company : 'apple',
+      position : 'senior dev',
+      timeline : '2024-2025',
+      description : 'nothing'
     }
   ]
 
@@ -59,7 +59,7 @@ function App() {
   }
   
   const addEdu = () => {
-    const newEducation = {...educationInfo, id:uuidv4()}
+    const newEducation = {...initialEducationInfo, id:uuidv4()}
     setEducationInfo(prev => [...prev, newEducation])
   }
 
@@ -97,7 +97,7 @@ function App() {
   }
   
   const addExp = () => {
-    const newExperience = {...experienceInfo, id:uuidv4()}
+    const newExperience = {...initialExperienceInfo, id:uuidv4()}
     setExperienceInfo(prev => [...prev, newExperience])
   }
 
