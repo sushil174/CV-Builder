@@ -1,6 +1,6 @@
 function Education({info,intituteChange, deleteEdu, addEdu}) {
     return (   
-        <> 
+        <div className="input-education"> 
         {info.map(edu => (
             <ul key={edu.id}>
 
@@ -29,7 +29,7 @@ function Education({info,intituteChange, deleteEdu, addEdu}) {
             </ul>
         ))}
         <button onClick={addEdu}>Add</button>
-        </>
+        </div>
     );
 }
 

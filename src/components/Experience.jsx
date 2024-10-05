@@ -5,7 +5,7 @@ function Experience({
     addExp
 }) {
     return (   
-        <> 
+        <div className="input-experience"> 
         {info.map(work => (
             <ul key={work.id}>
                 <li>
@@ -33,7 +33,7 @@ function Experience({
             </ul>
         ))}
         <button onClick={addExp}>Add</button>
-        </>
+        </div>
     );
 }
 

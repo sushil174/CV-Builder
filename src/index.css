@@ -4,6 +4,69 @@
   gap: 2em;
 }
 
+.resume-info {
+  background-color: aquamarine;
+  width: 210mm;
+  height: 297mm;
+  border: 1px solid #000; 
+  box-sizing: border-box;
+}
+h1, h2 , p ,ul{
+  margin: 0;
+}
+.resume-general-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 2em;
+  gap: 1em;
+
+}
+
+.resume-general-info div {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.education-info, .experience-info {
+  margin: 2em;
+  background-color: aliceblue;
+}
+
+.education-info h2 , .experience-info h2 {
+  background-color: blueviolet;
+  text-align: center;
+  padding: 5px;
+}
+
+.education-info div, .experience-info div {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  margin-bottom: 1.5em;
+  gap: 5px;
+}
+
+
+.fill-in {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.general-info {
+  background-color: blue;
+}
+
+.input-experience , .input-education, .general-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
 li {
   list-style: none;
   display: flex;
@@ -13,6 +76,23 @@ li {
 ul {
   padding: 0;
   display: flex;
+  gap: 1em;
   flex-direction: column;
 }
 
+.input-experience ul, .input-education ul{
+  border-bottom: 1px solid red;
+  padding-bottom: 1em;
+}
+.input-experience {
+  background-color: bisque;
+}
+
+.input-education {
+  background-color: aqua;
+}
+
+input, button {
+  padding: 5px;
+  font-size: 1rem;
+}
