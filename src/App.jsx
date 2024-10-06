@@ -115,6 +115,9 @@ function App() {
     setExperienceInfo(prev => [...prev, newExperience])
   }
 
+  function print() {
+    window.print()
+  }
 
   return (
     <div className='container'>
@@ -122,6 +125,9 @@ function App() {
         <GeneralInfo info = {generalInfo} nameChange={handleName} />
         <Education labels={educationLabels} info={educationInfo} intituteChange={handleInstitute} deleteEdu={deleteEdu} addEdu={addEdu}/>
         <Experience labels={experienceLabels} info={experienceInfo} companyChange={handleCompany} deleteExp={deleteExp} addExp={addExp}/>
+        <button onClick={print} className='no-print'>
+          Save PDF
+        </button>
       </div>
       <ResumePreview info={generalInfo} eduInfo={educationInfo} expInfo={experienceInfo}/>
     </div>

@@ -1,12 +1,12 @@
 :root {
-  --header-background-color : #1e293b;
+  --header-background-color : #2C446F;
   --header-font-color : white;
   --body-color : lightgray;
   --input-bg-color : rgb(239, 237, 237);
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: var(--body-color);
 }
 .container {
@@ -21,7 +21,7 @@ body {
   width: 210mm;
   height: 297mm;
   box-sizing: border-box;
-  font-size: 1.15rem;
+  /* font-size: 1.15rem; */
 }
 
 h1, h2 , p ,ul,input{
@@ -106,24 +106,32 @@ ul {
 }
 
 input, button {
-  padding: 5px;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   font-family: 'Times New Roman', Times, serif;
-}
-input,button {
   background-color: var(--input-bg-color);
   border: 2px solid var(--body-color);
   padding: 5px 10px;
 }
 
-button:hover {
-  background-color: lightseagreen;
+
+button {
+  cursor: pointer;
+  background-color: var(--header-font-color);
+  border: 2px solid lightseagreen;
 }
 
+.input-experience button:hover, .input-education button:hover {
+  background-color: rgba(32, 178, 170,.5);
+
+}
+
+ul button {
+  border: 2px solid lightpink;
+}
 ul button:hover {
-  background-color: lightpink;
+  background-color: rgba(255, 182, 193,.5);
 }
 .header {
   display: flex;
@@ -131,7 +139,7 @@ ul button:hover {
   align-items: center;
   border: 2px solid var(--body-color);
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .header button {
@@ -143,4 +151,54 @@ ul button:hover {
 }
 .header button:hover {
   background-color: var(--body-color);
+}
+
+.no-print {
+  background-color: var(--header-background-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  transition: transform .1s ease-in;
+}
+
+.no-print:hover {
+  transform: scaleX(1.02);
+}
+@media print {
+
+  /* body * {
+    visibility: hidden; 
+  } */
+
+
+  body {
+    -webkit-print-color-adjust: exact; 
+    print-color-adjust: exact; 
+  }
+  
+  body,html {
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  main {
+    margin: 0 auto;
+    padding: 0;
+    visibility: visible; 
+    position: absolute;  
+    width: 100%;
+    max-width: 210mm;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .no-print {
+    display: none; /* Hide print button */
+  }
 }
