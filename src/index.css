@@ -64,7 +64,7 @@ h1, h2 , p ,ul,input{
 
 .education-info div, .experience-info div {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   margin-top: 1em;
   gap: 5px;
 }
@@ -85,9 +85,7 @@ h1, h2 , p ,ul,input{
   justify-content: center;
   flex-direction: column;
   padding: 1.5em;
-  gap: 1em;
-  box-shadow: 0px 0px 50px 5px rgba(82, 81, 81,.3);
-
+  gap: 1em; 
 }
 
 li {

@@ -7,29 +7,29 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-  const initalGeneralInfo = {full_name : "Sushil Koregave", 
-    email : "sushilkoregave@gmail.com", 
-    phone : '787455445', 
-    address : 'mumbai, thane'
+  const initalGeneralInfo = {full_name : "John Doe", 
+    email : "hohndoe@gmail.com", 
+    phone : '+92 787455445', 
+    address : 'North Pole'
   }
 
   const initialEducationInfo = [
     {
       id : '1',
-      institute : 'mumbai university',
-      study : 'cs',
+      institute : 'NewTalent Clg',
+      study : 'Computer Science',
       timeline : '2022-2023',
-      score : '10',
+      score : '8/10',
     }
   ]
 
   const initialExperienceInfo = [
     {
       id : '1',
-      company : 'apple',
-      position : 'senior dev',
-      timeline : '2024-2025',
-      description : 'nothing'
+      company : 'High Tech',
+      position : 'Senior dev',
+      timeline : '2024-present',
+      description : 'Created and maintained official website'
     }
   ]
   const educationLabels = [
