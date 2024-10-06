@@ -23,7 +23,7 @@ function Inputs({labels, itr, onChange, onDelete}) {
                                 <input type="text" name={l.name} value={itr[l.name] || ''} onChange={e => {onChange(itr.id,e)}}/>
                             </li>
                         ))}
-                        <button onClick={onDelete(itr.id)}>Delete</button>
+                        <button className="delete" onClick={onDelete(itr.id)}>Delete</button>
                     </ul>
                 
             }

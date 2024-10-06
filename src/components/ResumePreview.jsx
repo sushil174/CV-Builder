@@ -1,12 +1,24 @@
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 function ResumePreview({info,eduInfo,expInfo}) {
     return (
         <main className="resume-info">
             <div className="resume-general-info">
                 <h1>{info.full_name}</h1>
                 <div>
-                    <p>{info.email}</p>
-                    <p>{info.phone}</p>
-                    <p>{info.address}</p>
+                    <p>
+                        <MdEmail />
+                        {info.email}
+                    </p>
+                    <p>
+                        <FaPhoneAlt />
+                        {info.phone}
+                    </p>
+                    <p>
+                        <FaLocationDot />
+                        {info.address}
+                    </p>
                 </div>
             </div>
 
